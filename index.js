@@ -64,7 +64,7 @@ bot.launch()
 console.log(`bot server running...`);
 
 app.get('/', function(req, res){
-    res.send('bot running...')
+    res.send('bot running...'+ "<a href='https://t.me/tiktok_video_yuklovchibot'>Bots</a>")
 })
 const port =  process.env.PORT || 3000
 

@@ -32,7 +32,7 @@ bot.command('/help', async(ctx) => {
 })
 
 async function downFunc(ctx){
-    let botLink =  `https://t.me/tiktok_video_yuklovchibot`
+    let botLink =  `@tiktok_video_yuklovchibot`
     var link = ctx.message.text  
     var chatID = ctx.chat.id
     const mediaUrl = await tiktokDown(link)

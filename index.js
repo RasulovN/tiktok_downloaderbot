@@ -1,7 +1,10 @@
+const express = require('express')
 const { Telegraf } = require('telegraf')
 const dotenv = require('dotenv')
 const  { tiktokDown } = require('./req')
+const app = express()
 dotenv.config()
+
 
 const bot = new Telegraf(process.env.BOT_TOKEN)
 bot.start((ctx) => ctx.reply(`Salom, ${ctx.chat.first_name} TikTok dan videoni suv belgisiz yuklab olishiz uchun, videoni ssilkasini yuboring. `))
@@ -58,7 +61,14 @@ async function downFunc(ctx){
 
 
 bot.launch()
-console.log(`running...`);
+console.log(`bot server running...`);
 
+app.get('/', function(req, res){
+    res.send('bot running...')
+})
+const port =  process.env.PORT || 3000
 
+app.listen(port, ()=>{
+    console.log(`Server on port ${port}`);
+});
  

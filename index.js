@@ -72,16 +72,16 @@ app.listen(port, ()=>{
     console.log(`Server on port ${port}`);
 });
 
-let interval = 1000 / 15;
+// let interval = 1000 / 15;
 
-for (let user of userList) {
-setTimeout(async function () {
-    try {
-    await bot.sendMessage(user.user_id, chatId, messageId, {
-        reply_markup: message.reply_to_message.reply_markup,
-    });
-    } catch (e) {}
-}, interval);
-``;
-}
+// for (let user of userList) {
+// setTimeout(async function () {
+//     try {
+//     await bot.sendMessage(user.user_id, chatId, messageId, {
+//         reply_markup: message.reply_to_message.reply_markup,
+//     });
+//     } catch (e) {}
+// }, interval);
+// ``;
+// }
  
